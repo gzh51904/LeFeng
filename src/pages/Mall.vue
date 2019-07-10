@@ -1,5 +1,5 @@
 <template>
-  <div class="mine">
-    我的
+  <div class="mall">
+    商城
   </div>
 </template>

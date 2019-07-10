@@ -1,5 +1,5 @@
 <template>
-  <div class="mine">
-    我的
+  <div class="nav">
+    分类
   </div>
 </template>
