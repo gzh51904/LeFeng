@@ -9,8 +9,16 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "element-ui": "^2.10.1",
+    "less-loader": "^5.0.0",
+    "load-grunt-tasks": "^5.0.0",
+    "mint-ui": "^2.2.13",
+    "module": "^1.2.5",
+    "sui-mobile": "^0.5.9",
+    "time-grunt": "^2.0.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vux": "^2.9.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
