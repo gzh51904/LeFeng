@@ -1,6 +1,7 @@
 
 <template>
   <div id="app">
+    
     <mt-tabbar >
       <mt-tab-item id="外卖" v-for="item in pages" :key="item.name">
         <img slot="icon" src="./assets/temai.jpg">
