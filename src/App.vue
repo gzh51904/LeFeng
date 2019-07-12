@@ -55,4 +55,12 @@
     }
   }
   </script>
+  <style>
+     .mint-tabbar{
+      position: fixed;
+      bottom: 0;
+      z-index: 1;
+    }
+    a{text-decoration: none;color: rgb(54, 51, 51);}
+  </style>
   
