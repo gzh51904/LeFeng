@@ -145,6 +145,7 @@
     position:fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
   .nav_lz{
     padding: 1%;
@@ -152,7 +153,7 @@
   .ico_lz{text-align: center}
   .img_lz img{
     width: 100%;
-    margin-top:3.2rem;
+    margin-top:1.4rem;
   }
   .nav2_lz{
     width:20%;
@@ -165,9 +166,9 @@
   }
   .temai_lz{
     text-align: center;
-    height: 1.7rem;
-    line-height: 1.7rem;
-    font-size: 0.8rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.1rem;
     background: rgb(250, 246, 246);
   }
   .wenbiquan_lz {
@@ -182,9 +183,9 @@
   }
   .pinpai_lz>p{
     text-align: center;
-    height: 2rem;
-    line-height: 2rem;
-    font-size: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.1rem;
     background: rgb(250, 246, 246);
     color:rgb(228, 114, 114);
     margin: 0;
@@ -199,7 +200,7 @@
     overflow-x: scroll;
   }
   .zhuanqu_lz a{
-    width: 5rem;
+    width: 2rem;
     display: inline-block;
     vertical-align: top;
     margin: 0 .1rem;
@@ -210,7 +211,7 @@
     padding: .025rem .04rem;
     font-size: .1rem;
     line-height: .01rem;
-    margin: .2rem 0 1.7rem;
+    margin: .2rem 0 .7rem;
   }
 </style>
 
