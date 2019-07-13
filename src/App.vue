@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <mt-tabbar >
-      <mt-tab-item id="外卖" v-for="item in pages" :key="item.name">
+      <mt-tab-item id="外卖" v-for="item in pages" :key="item.name" >
         <img slot="icon" src="./assets/temai.jpg">
         <!-- <i slot="icon" class="el-icon-timer"></i> -->
         <router-link :to="item.path">{{item.title}}</router-link>
@@ -28,6 +28,13 @@
     name: 'app',
     data(){
       return {
+        navs:[{
+          title:'分类',
+          content:'分类'
+        },{
+          title:'品牌',
+          content:'品牌'
+        }],
         pages:[{
           title:'特卖',
           path:'/home',
