@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header>
+    <header class="home_header_lz">
       <el-row class="nav_lz">
         <el-col :span="4" class="ico_lz"><el-avatar src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3283535744,1542820073&fm=26&gp=0.jpg"></el-avatar><div class="grid-content bg-purple"></div></el-col>
         <el-col :span="20">
@@ -140,7 +140,7 @@
     width: 100%;
     height: 2000px;
   }
-  header{
+  .home_header_lz{
     background: #fc1158;
     position:fixed;
     top: 0;
@@ -153,7 +153,7 @@
   .ico_lz{text-align: center}
   .img_lz img{
     width: 100%;
-    margin-top:1.4rem;
+    margin-top:1.3rem;
   }
   .nav2_lz{
     width:20%;
