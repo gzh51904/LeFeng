@@ -12,7 +12,7 @@
 </mt-header>
 <div>全场满99元包邮</div>
 <mt-tab-container v-model="active">
-  <mt-tab-container-item id="tab-container1">
+  <!-- <mt-tab-container-item id="tab-container1">
     <mt-cell v-for="n in 10" title="tab-container 1"></mt-cell>
   </mt-tab-container-item>
   <mt-tab-container-item id="tab-container2">
@@ -20,7 +20,7 @@
   </mt-tab-container-item>
   <mt-tab-container-item id="tab-container3">
     <mt-cell v-for="n in 7" title="tab-container 3"></mt-cell>
-  </mt-tab-container-item>
+  </mt-tab-container-item> -->
 </mt-tab-container>
   <el-input id="top_fenlei_cw" v-model="input" placeholder="爽肤水"></el-input>
 
@@ -30,7 +30,7 @@
 </mt-navbar>
 
 <!-- tab-container -->
-<mt-tab-container v-model="selected">
+<!-- <mt-tab-container v-model="selected">
   <mt-tab-container-item id="1">
     <mt-cell v-for="n in 10" :title="'内容 ' + n" />
   </mt-tab-container-item>
@@ -40,7 +40,7 @@
   <mt-tab-container-item id="3">
     <mt-cell v-for="n in 6" :title="'选项 ' + n" />
   </mt-tab-container-item>
-</mt-tab-container>
+</mt-tab-container> -->
   <div id="content_cw">
 
   </div>

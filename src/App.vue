@@ -1,16 +1,9 @@
 
 <template>
   <div id="app">
-<<<<<<< HEAD
-    
-    <mt-tabbar >
-      <mt-tab-item id="外卖" v-for="item in pages" :key="item.name" >
-        <img slot="icon" src="./assets/temai.jpg">
-=======
     <!-- <mt-tabbar >
       <mt-tab-item  v-for="item in pages" :key="item.name">
         <img slot="icon" src="./assets/temai.jpg"> -->
->>>>>>> 76191a586159ad3adea845e2bf7d9932b785aac4
         <!-- <i slot="icon" class="el-icon-timer"></i> -->
         <!-- <router-link :to="item.path">{{item.title}}</router-link>
       </mt-tab-item>
