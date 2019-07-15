@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- ---顶部固定搜索栏--- -->
     <header class="home_header_lz">
       <el-row class="nav_lz">
         <el-col :span="4" class="ico_lz"><el-avatar src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3283535744,1542820073&fm=26&gp=0.jpg"></el-avatar><div class="grid-content bg-purple"></div></el-col>
@@ -13,18 +14,25 @@
         </el-col>
       </el-row>
     </header>
-  
+    <!-- ————————头部图片—————— -->
     <div class="img_lz">
       <img src="http://b.appsimg.com/upload/maappactadmin/2019/07/10/84/156272836171_750x300_60.jpg" alt="">
     </div>  
     <div>
-      <div class="nav2_lz">
-        <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar><span class="nav3_lz">护肤套装</span>
-      </div>
-      <div class="nav2_lz">
+    <!-- ---按钮导航栏---- -->
+    <van-grid :border="false" :column-num="5">
+      <van-grid-item v-for="item in nav" :key="item.name">
+        <van-image :src="item.src" />
+      </van-grid-item>
+    </van-grid>
+    <!-- 废弃的按钮导航栏 -->
+      <!-- <div class="nav2_lz" v-for="item in nav" :key="item.name">
+        <el-avatar :src="item.src"></el-avatar><span class="nav3_lz">{{item.name}}</span>
+      </div> -->
+      <!-- <div class="nav2_lz">
         <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar><span class="nav3_lz">面膜</span>
-      </div>
-      <div class="nav2_lz">
+      </div> -->
+      <!-- <div class="nav2_lz">
         <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar><span class="nav3_lz">保湿水乳</span>
       </div>
       <div class="nav2_lz">
@@ -47,11 +55,12 @@
       </div>
       <div class="nav2_lz">
         <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar><span class="nav3_lz">身体护理</span>
-      </div>
+      </div> -->
       <div class="temai_lz">
         <p>新特卖每天早10晚8更新</p>
       </div>
     </div>
+      <!-- -----特卖显示的图片---- -->
       <table>
         <tbody>
           <tr>
@@ -65,6 +74,7 @@
           </tr>
         </tbody>
       </table>
+      <!-- 品牌专区的可水平滑动商品列表栏 -->
       <div class="pinpai_lz">
         <p>品牌专区</p>
         <img src="http://b.appsimg.com/upload/hhcapps/2019/06/11/84/hhc1560218746388r9v9_750x330_70.jpg" alt="">
@@ -216,10 +226,44 @@
 </style>
 
 <script>
+import Vue from "vue";
+import { Button,Grid,GridItem,Image } from "vant";
+Vue.use(Button).use(Grid).use(GridItem).use(Image);
   export default {
     data() {
       return {
-        input: ''
+        input: '',
+        nav:[{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/143/153897980194_111x300_80.png',
+          name:'护肤套装'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/84/153898164659_111x300_80.png',
+          name:'面膜'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/139/153898172341_111x300_80.png',
+          name:'保湿水乳'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/180/153898178919_111x300_80.png',
+          name:'眼霜'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/139/153898172341_111x300_80.png',
+          name:'母婴护肤'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/24/153898236330_111x300_80.png',
+          name:'洁面卸妆'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/27/153898241993_111x300_80.png',
+          name:'口红'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/65/153898329114_111x300_80.png',
+          name:'底妆'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/29/153898336817_111x300_80.png',
+          name:'洗发护发'
+        },{
+          src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/92/153898341256_111x300_80.png',
+          name:'身体护理'
+        }]
       }
     }
   }

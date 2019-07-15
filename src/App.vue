@@ -1,12 +1,18 @@
 
 <template>
   <div id="app">
-    
-    <mt-tabbar >
-      <mt-tab-item id="外卖" v-for="item in pages" :key="item.name">
-        <img slot="icon" src="./assets/temai.jpg">
+    <!-- <mt-tabbar >
+      <mt-tab-item  v-for="item in pages" :key="item.name">
+        <img slot="icon" src="./assets/temai.jpg"> -->
         <!-- <i slot="icon" class="el-icon-timer"></i> -->
-        <router-link :to="item.path">{{item.title}}</router-link>
+        <!-- <router-link :to="item.path">{{item.title}}</router-link>
+      </mt-tab-item>
+    </mt-tabbar> -->
+    <mt-tabbar class="tabbar_lz">
+      <mt-tab-item  v-for="item in pages" :key="item.name" @click.native="goto(item.name)" >
+        <!-- <img slot="icon" src="./assets/temai.jpg"> -->
+        <i slot="icon" :class="item.ico" @click.color=""></i>
+        <span>{{item.title}}</span>
       </mt-tab-item>
     </mt-tabbar>
 
@@ -33,25 +39,35 @@
           title:'特卖',
           path:'/home',
           name:'Home',
-          src:'./assets/temai.jpg'
+          ico:'el-icon-timer'
         },{
           title:'分类',
           path:'/nav',
-          name:'Nav'
+          name:'Nav',
+          ico:'el-icon-date'
         },{
           title:'商城',
           path:'/mall',
-          name:'Mall'
+          name:'Mall',
+          ico:'el-icon-shopping-bag-1'
         },{
           title:'购物车',
           path:'/cart',
-          name:'Cart'
+          name:'Cart',
+          ico:'el-icon-shopping-cart-1'
         },{
           title:'我的蜂巢',
           path:'/mine',
-          name:'Mine'
-        }
+          name:'Mine',
+          ico:'el-icon-user'
+        },
         ]
+      }
+    },
+    // 利用路由传参把整个底部标签变为可点击
+    methods:{
+      goto(name){
+        this.$router.push({name})
       }
     }
   }
@@ -61,7 +77,21 @@
       position: fixed;
       bottom: 0;
       z-index: 1;
-    }
-    a{text-decoration: none;color: rgb(54, 51, 51);}
+    } 
+    body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2000px;
+  }
+  a{text-decoration: none;color: rgb(54, 51, 51);}
+  .tabbar_lz .mint-tab-item-icon>i{
+    font-size: .65rem;
+    color: rgb(54, 51, 51);
+  }
+  .tabbar_lz span{
+    color: rgb(54, 51, 51);
+  }
   </style>
+
   
