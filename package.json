@@ -14,6 +14,7 @@
     "load-grunt-tasks": "^5.0.0",
     "mint-ui": "^2.2.13",
     "module": "^1.2.5",
+    "npm": "^6.10.1",
     "sui-mobile": "^0.5.9",
     "time-grunt": "^2.0.0",
     "vue": "^2.6.10",
