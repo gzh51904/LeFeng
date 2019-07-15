@@ -113,6 +113,9 @@
     padding-top:.1rem;
     padding-bottom:.3rem;
   }
+  .el-menu-vertical-demo{
+    margin-bottom: 2rem;
+  }
 </style>
 // <script>
 //   export default {

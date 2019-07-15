@@ -183,12 +183,20 @@
           </a>
         </div>
       </div>
-      <div class="zhuangchang_lz">
-        <a >
-          <img src="" alt="">
-        </a>
-
-      </div>
+      <ul class="zhuangchang_lz infinite-list" v-infinite-scroll="load">
+        <li v-for="i in count" class="infinite-list-item" >
+          <div v-for="item in infiniteScroll">
+          <a >
+            <div>
+            <img :src="item.img" alt="">
+            </div>
+          </a>
+          <p>
+            <span>{{item.guanggao}}</span>{{item.name}}
+          </p>
+          </div>
+        </li>
+      </ul>
   </div>
 </template>
 <style>
@@ -196,7 +204,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 2000px;
+    height: 100%;
   }
   .home_header_lz{
     background: #fc1158;
@@ -271,6 +279,24 @@
     line-height: .01rem;
     margin: .2rem 0 .7rem;
   }
+  .zhuangchang_lz>li img{
+    width: 100%;
+  }
+  .zhuangchang_lz p{
+    font-size: .125rem;
+    color: #4c4c4c;
+    line-height: .6rem;
+    background-color: #fff;
+    padding: 0 .12rem;
+    height: .7rem;
+    padding-left: .3rem
+  }
+  .zhuangchang_lz span{
+    margin-right: .18rem;
+    color: #fb4f89;
+    font-size: .135rem;
+    line-height: .29rem;
+  }
 </style>
 
 <script>
@@ -343,7 +369,47 @@ Vue.use(Button).use(Grid).use(GridItem).use(Image);
         },{
           canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0523/174/cb8d82f3-e156-45b6-b954-d93064ef5bfe_420_531.jpg', 
           price:'268'  
-        }]
+        }],
+        infiniteScroll:[{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/05/22/154/hhc155850905023228y7_1125x495_80.jpg',
+          guanggao:'喷一喷，更补水',
+          name:'理肤泉热卖专场'
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/26/163/hhc1561528501492axfj_1125x495_80.jpg',
+          guanggao:'爆款肌底液直降',
+          name:'欧莱雅护肤热卖专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/24/17/hhc1561370328470lcly_1125x495_80.jpg',
+          guanggao:'补水不用慌',
+          name:'温碧泉补水专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/15/47/hhc1560582126025vm1s_1125x495_80.jpg',
+          guanggao:'经典国货',
+          name:'百雀羚经典国货专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/04/148/hhc1559618938310bkx2_1125x495_80.jpg',
+          guanggao:'面膜低至1.5元/片',
+          name:'花肌粹护肤专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/11/36/hhc1560234501289d10k_1125x495_80.jpg',
+          guanggao:'5.2折起',
+          name:'珊珂&资生堂洗护联合专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/20/177/hhc1561011000208u2ed_1125x495_80.jpg',
+          guanggao:'夏日白回来',
+          name:'玉兰油热卖专场'          
+        },{
+          img:'http://b.appsimg.com/upload/hhcapps/2019/06/24/61/hhc15613663272335ozs_1125x495_80.jpg',
+          guanggao:'5折起',
+          name:'兰芝热卖专场'          
+        }],
+        count: 0
+      
+      }
+    },
+    methods: {
+      load () {
+        this.count += 2
       }
     }
   }
