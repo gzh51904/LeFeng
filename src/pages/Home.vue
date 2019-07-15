@@ -75,8 +75,9 @@
         </tbody>
       </table>
       <!-- 品牌专区的可水平滑动商品列表栏 -->
-      <div class="pinpai_lz">
+      <!-- <div class="pinpai_lz">
         <p>品牌专区</p>
+        <div>
         <img src="http://b.appsimg.com/upload/hhcapps/2019/06/11/84/hhc1560218746388r9v9_750x330_70.jpg" alt="">
         <div class="zhuanqu_lz">
           <a href="">
@@ -140,6 +141,53 @@
             <p>￥111</p>
           </a>
         </div>
+        </div>
+      </div> -->
+      <!-- 更新后的品牌专区的可水平滑动商品列表栏 -->
+     <div class="pinpai_lz">
+        <p>品牌专区</p>
+        <img src="http://b.appsimg.com/upload/hhcapps/2019/06/11/84/hhc1560218746388r9v9_750x330_70.jpg" alt="">
+        <div class="zhuanqu_lz">
+          <a  v-for="item in pinpai" :key="item.name">
+            <div>
+              <img :src="item.canpinIMG" alt="">
+            </div>
+            <p>￥{{item.price}}</p>
+          </a>
+        </div>
+        <img src="http://b.appsimg.com/upload/hhcapps/2019/06/25/194/hhc1561428469528mkzs_1125x495_80.jpg" alt="">
+        <div class="zhuanqu_lz">
+          <a  v-for="item in pinpai" :key="item.name">
+            <div>
+              <img :src="item.canpinIMG" alt="">
+            </div>
+            <p>￥{{item.price}}</p>
+          </a>
+        </div>
+        <img src="http://b.appsimg.com/upload/hhcapps/2019/05/05/64/hhc1557024026605uwju_1125x495_80.jpg" alt="">
+        <div class="zhuanqu_lz">
+          <a  v-for="item in pinpai" :key="item.name">
+            <div>
+              <img :src="item.canpinIMG" alt="">
+            </div>
+            <p>￥{{item.price}}</p>
+          </a>
+        </div>
+        <img src="http://b.appsimg.com/upload/hhcapps/2019/07/08/196/hhc15625717840166vv8_1125x495_80.jpg" alt="">
+        <div class="zhuanqu_lz">
+          <a  v-for="item in pinpai" :key="item.name">
+            <div>
+              <img :src="item.canpinIMG" alt="">
+            </div>
+            <p>￥{{item.price}}</p>
+          </a>
+        </div>
+      </div>
+      <div class="zhuangchang_lz">
+        <a >
+          <img src="" alt="">
+        </a>
+
       </div>
   </div>
 </template>
@@ -263,6 +311,38 @@ Vue.use(Button).use(Grid).use(GridItem).use(Image);
         },{
           src:'http://b.appsimg.com/upload/maappactadmin/2018/10/08/92/153898341256_111x300_80.png',
           name:'身体护理'
+        }],
+        pinpai:[{
+          pinpaiIMG:'http://b.appsimg.com/upload/hhcapps/2019/06/11/84/hhc1560218746388r9v9_750x330_70.jpg',
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0507/179/66221acd-356d-4a32-a0f0-a73dc6a5acc6_420_531.jpg',
+          price:'268'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0430/39/0a2480e9-6f6a-4184-b594-4a9007f30d17_420_531.jpg', 
+          price:'169'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0506/74/2c1befcf-56b9-4bb5-9c1f-7a3123ba5d13_420_531.jpg', 
+          price:'108'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0522/153/1a2d6464-a9f3-4b78-8fe9-0210e88719f2_420_531.jpg', 
+          price:'168'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0506/47/9b6b2c4e-135d-4cca-9a31-3086a1e3125a_420_531.jpg', 
+          price:'100'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/2019/05/07/121/4b7808bc-e029-4e58-8f0f-3df7556037e7_420_531.jpg', 
+          price:'268'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0618/61/47d97ea7-88ef-4e9c-bacd-f3c1aec5a706_420_531.jpg', 
+          price:'169'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0506/102/c34a0002-c74e-4d1b-bf65-e57b29d7c060_420_531.jpg', 
+          price:'283'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0507/77/2247a53c-c888-4652-a57d-f0a4608d6266_420_531.jpg', 
+          price:'462'  
+        },{
+          canpinIMG:'http://a2.vimage1.com/upload/merchandise/pdcvis/107028/2019/0523/174/cb8d82f3-e156-45b6-b954-d93064ef5bfe_420_531.jpg', 
+          price:'268'  
         }]
       }
     }

@@ -11,7 +11,7 @@
     <mt-tabbar class="tabbar_lz">
       <mt-tab-item  v-for="item in pages" :key="item.name" @click.native="goto(item.name)" >
         <!-- <img slot="icon" src="./assets/temai.jpg"> -->
-        <i slot="icon" :class="item.ico" @click.color=""></i>
+        <i slot="icon" :class="item.ico"></i>
         <span>{{item.title}}</span>
       </mt-tab-item>
     </mt-tabbar>
